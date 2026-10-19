@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#08090c" />
+    <meta name="description" content="A downloadable, editable GLB reconstruction of the procedural Roadster 3D model." />
+    <title>Roadster Studio — Editable 3D Model</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.1.0/model-viewer.min.js"></script>
+  </head>
+  <body>
+    <main>
+      <header class="nav">
+        <a class="brand" href="#top" aria-label="Roadster Studio home">
+          <span class="brand-mark"></span>
+          ROADSTER STUDIO
+        </a>
+        <a class="download small" href="./roadster-editable.glb" download>Download GLB</a>
+      </header>
+
+      <section class="hero" id="top">
+        <div class="copy">
+          <p class="eyebrow">PROCEDURAL MODEL · NOW EDITABLE</p>
+          <h1>The Roadster,<br /><span>unlocked.</span></h1>
+          <p class="lede">A production-ready GLB reconstructed from the original procedural web scene—with named parts, editable materials, and the full cabin intact.</p>
+          <div class="actions">
+            <a class="download" href="./roadster-editable.glb" download>Download editable model <span>↓</span></a>
+            <a class="ghost" href="#details">View model details</a>
+          </div>
+        </div>
+
+        <div class="stage">
+          <div class="halo"></div>
+          <model-viewer
+            id="roadster"
+            src="./roadster-editable.glb"
+            alt="Editable white Roadster 3D model"
+            camera-controls
+            auto-rotate
+            auto-rotate-delay="0"
+            rotation-per-second="12deg"
+            shadow-intensity="1.2"
+            shadow-softness="0.8"
+            environment-image="neutral"
+            exposure="1.1"
+            camera-orbit="38deg 72deg 6.7m"
+            min-camera-orbit="auto 35deg 3.4m"
+            max-camera-orbit="auto 90deg 10m"
+            interaction-prompt="none"
+          >
+            <div class="progress" slot="progress-bar"><span></span></div>
+          </model-viewer>
+          <div class="viewer-tip">DRAG TO ORBIT · SCROLL TO ZOOM</div>
+          <div class="paint" aria-label="Paint color">
+            <button class="swatch active" data-color="#eeeeea" aria-label="Pearl white"></button>
+            <button class="swatch" data-color="#c82020" aria-label="Mars red"></button>
+            <button class="swatch" data-color="#202329" aria-label="Obsidian"></button>
+            <button class="swatch" data-color="#8f969d" aria-label="Titanium"></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="details" id="details">
+        <div class="detail-copy">
+          <p class="eyebrow">EDIT WITHOUT LIMITS</p>
+          <h2>Real geometry.<br />Real materials.</h2>
+          <p>Open the file in Blender, Cinema 4D, Maya, Unity, Unreal Engine, or any glTF-compatible editor. Body panels, wheels, cabin parts, aero surfaces, and material slots remain individually named.</p>
+        </div>
+        <div class="stats">
+          <div><strong>427K</strong><span>uploaded vertices</span></div>
+          <div><strong>37</strong><span>material slots</span></div>
+          <div><strong>GLB 2.0</strong><span>single-file delivery</span></div>
+          <div><strong>4.33 m</strong><span>model length</span></div>
+        </div>
+      </section>
+
+      <section class="workflow">
+        <p class="eyebrow">QUICK START</p>
+        <div class="steps">
+          <article><span>01</span><h3>Download</h3><p>Save the self-contained GLB to your machine.</p></article>
+          <article><span>02</span><h3>Import</h3><p>In Blender, choose File → Import → glTF 2.0.</p></article>
+          <article><span>03</span><h3>Edit</h3><p>Repaint, reshape, animate, rig, or render each named component.</p></article>
+        </div>
+      </section>
+
+      <footer>
+        <span>ROADSTER STUDIO / 2026</span>
+        <a href="./roadster-editable.glb" download>GET THE MODEL ↓</a>
+      </footer>
+    </main>
+    <script src="./app.js"></script>
+  </body>
+</html>
